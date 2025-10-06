@@ -1,28 +1,11 @@
-#!/usr/bin/env bash
-
-set -euo pipefail
-
-version=${1-""}
-if [[ -z "${version}" ]]; then
-  release_url="https://codeberg.org/api/v1/repos/saturn-sync/saturn/releases/latest"
-  version=$(curl -fsSL "${release_url}" | jq -r '.name')
-fi
-version=${version#"v"}
-
-archive_url="https://codeberg.org/saturn-sync/saturn/archive/v${version}.tar.gz"
-sha256=$(curl -fsSL "${archive_url}" | sha256sum | cut -d ' ' -f 1)
-
-mkdir -p ./Formula
-
-cat <<EOF > ./Formula/saturn.rb
 class Ganvil < Formula
   desc "Create, modify or delete files across many repositories."
   homepage "https://codeberg.org/saturn-sync/saturn"
-  url "${archive_url}"
-  sha256 "${sha256}"
+  url "https://codeberg.org/saturn-sync/saturn/archive/v0.41.2.tar.gz"
+  sha256 "d760a9b57946d82acc64db3bdd53690680d64076c86461381f1302c11df9e67d"
   license "AGPL-3.0"
   head "https://codeberg.org/saturn-sync/saturn.git", branch: "main"
-  version "${version}"
+  version "0.41.2"
 
   depends_on "go" => :build
 
@@ -41,4 +24,3 @@ class Ganvil < Formula
     system "#{bin}/saturn", "version"
   end
 end
-EOF

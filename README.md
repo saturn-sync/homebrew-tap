@@ -1,20 +1,20 @@
 # homebrew-tap
 
-A [Homebrew](https://brew.sh) tap for [ganvil](https://codeberg.org/ganvil/ganvil).
+A [Homebrew](https://brew.sh) tap for [Saturn](https://codeberg.org/saturn-sync/saturn).
 
 ## Usage
 
 ### Install a formula
 
-`brew install ganvil/tap/ganvil`
+`brew install saturn-sync/tap/saturn`
 
-Or `brew tap ganvil/tap` and then `brew install ganvil`.
+Or `brew tap saturn-sync/tap` and then `brew install saturn`.
 
 Or, in a [`brew bundle`](https://github.com/Homebrew/homebrew-bundle) `Brewfile`:
 
 ```ruby
-tap "ganvil/tap"
-brew "ganvil"
+tap "saturn-sync/tap"
+brew "saturn"
 ```
 
 ## Release
@@ -35,14 +35,14 @@ brew "ganvil"
 
 1.  Install the formula:
     ```shell
-    brew install ganvil/tap/ganvil
+    brew install saturn-sync/tap/saturn
     ```
 1.  change to the tap directory:
     ```shell
-    cd "$(brew --prefix)/Library/Taps/ganvil"
+    cd "$(brew --prefix)/Library/Taps/saturn-sync"
     ```
-1.  Make changes to [`Formula/ganvil.rb`](./Formula/ganvil.rb).
+1.  Make changes to [`Formula/saturn.rb`](./Formula/saturn.rb).
 1.  Re-install the formula to verify the changes:
     ```shell
-    brew reinstall ganvil/tap/ganvil
+    brew reinstall saturn-sync/tap/saturn
     ```
