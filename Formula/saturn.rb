@@ -1,4 +1,4 @@
-class Ganvil < Formula
+class Saturn < Formula
   desc "Create, modify or delete files across many repositories."
   homepage "https://codeberg.org/saturn-sync/saturn"
   url "https://codeberg.org/saturn-sync/saturn/archive/v0.41.2.tar.gz"
@@ -16,8 +16,8 @@ class Ganvil < Formula
     ENV["GOPATH"] = HOMEBREW_CACHE/"go_cache"
     system "make", "VERSION=v#{semver}", "build"
     bin.install "saturn"
-    bash_completion.install "completion/ganvil.bash" => "saturn"
-    zsh_completion.install "completion/ganvil.zsh" => "_saturn"
+    bash_completion.install "completion/saturn.bash" => "saturn"
+    zsh_completion.install "completion/saturn.zsh" => "_saturn"
   end
 
   test do
