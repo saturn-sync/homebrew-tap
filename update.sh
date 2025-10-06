@@ -15,7 +15,7 @@ sha256=$(curl -fsSL "${archive_url}" | sha256sum | cut -d ' ' -f 1)
 mkdir -p ./Formula
 
 cat <<EOF > ./Formula/saturn.rb
-class Ganvil < Formula
+class Saturn < Formula
   desc "Create, modify or delete files across many repositories."
   homepage "https://codeberg.org/saturn-sync/saturn"
   url "${archive_url}"
@@ -33,8 +33,8 @@ class Ganvil < Formula
     ENV["GOPATH"] = HOMEBREW_CACHE/"go_cache"
     system "make", "VERSION=v#{semver}", "build"
     bin.install "saturn"
-    bash_completion.install "completion/ganvil.bash" => "saturn"
-    zsh_completion.install "completion/ganvil.zsh" => "_saturn"
+    bash_completion.install "completion/saturn.bash" => "saturn"
+    zsh_completion.install "completion/saturn.zsh" => "_saturn"
   end
 
   test do
