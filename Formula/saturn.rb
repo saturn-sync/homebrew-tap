@@ -1,11 +1,11 @@
 class Saturn < Formula
   desc "Create, modify or delete files across many repositories."
   homepage "https://codeberg.org/saturn-sync/saturn"
-  url "https://codeberg.org/saturn-sync/saturn/archive/v0.49.2.tar.gz"
-  sha256 "d84ec4c02522b48df0334970f79d54310bf562be51d6422a37d18957102e1a12"
+  url "https://codeberg.org/saturn-sync/saturn/archive/v0.50.0.tar.gz"
+  sha256 "1ed1eefc37098f65c73c374a9c047d0a5bfad373ae0b75d608496515e04fd2d7"
   license "AGPL-3.0"
   head "https://codeberg.org/saturn-sync/saturn.git", branch: "main"
-  version "0.49.2"
+  version "0.50.0"
 
   depends_on "go" => :build
 
