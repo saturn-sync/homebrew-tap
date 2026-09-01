@@ -1,3 +1,9 @@
+# Moved
+
+Moved to [https://codeberg.org/saturn-sync/homebrew-tap/](https://codeberg.org/saturn-sync/homebrew-tap/).
+
+---
+
 # homebrew-tap
 
 A [Homebrew](https://brew.sh) tap for [Saturn](https://codeberg.org/saturn-sync/saturn).
